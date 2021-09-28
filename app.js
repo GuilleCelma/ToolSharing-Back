@@ -35,8 +35,8 @@ app.use("/", review);
 const productRouter = require("./routes/product-routes");
 app.use("/", productRouter);
 
-const transactionRouter = require("./routes/transaction-routes");
-app.use("/", transactionRouter);
+/* const transactionRouter = require("./routes/transaction-routes");
+app.use("/", transactionRouter); */
 
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require("./error-handling")(app);
