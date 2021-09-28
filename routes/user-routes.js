@@ -1,15 +1,7 @@
-
-const router = require("express").Router()
+const express = require("express");
+const router = express.Router();
 const User = require("../models/User.model")
 const mongoose = require("mongoose")
-
-<<<<<<< HEAD
-
-
-//<-----------------ROUTE TO DISPLAY USERS -------------------------------------------------------------------------------------------------------->
-=======
-//<-----------------ROUTE TO CREATE USERS -------------------------------------------------------------------------------------------------------->
->>>>>>> 525d1b74a8ce2ce00d525123b0a91d7d64920094
 
 router.get( "/user/:id" , (req, res) =>{
 

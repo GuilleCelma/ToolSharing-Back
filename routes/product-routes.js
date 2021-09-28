@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const mongoose = require("mongoose");
-const Product = require ()
+const Product = require ("../models/Product.model")
 
 //<-----------------ROUTE TO LIST ALL THE PRODUCTS-------------------------------------->
 
