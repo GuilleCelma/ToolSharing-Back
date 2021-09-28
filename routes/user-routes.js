@@ -3,20 +3,7 @@ const router = require("express").Router()
 const User = require("../models/User.model")
 const mongoose = require("mongoose")
 
-//<-----------------ROUTE TO CREATE USERS -------------------------------------------------------------------------------------------------------->
 
-router.post("/user", (req, res) =>{
-    
-    
-    const {usernaname, password, email, address, birthdate, sex, tel } = req.body //<------------REACT CONTROLED FORM INFO STORED----------------->
-    
-    
-    User
-    .create({usernaname, password, email, address, birthdate, sex, tel})
-    .then(userCreated => console.log(userCreated))
-    .catch(err => console.log (err))
-
-})
 
 //<-----------------ROUTE TO DISPLAY USERS -------------------------------------------------------------------------------------------------------->
 
