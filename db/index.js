@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 
 
 
-const MONGO_URI = process.env.DB_REMOTE 
+const MONGO_URI = process.env.DB_REMOTE || "mongodb://localhost/tool-share"
 
 mongoose
   .connect(MONGO_URI)
