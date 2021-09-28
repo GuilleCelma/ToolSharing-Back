@@ -1,6 +1,5 @@
 const { Schema, model } = require("mongoose");
 
-
 const productSchema = new Schema({
     name: String,
     description: String,
@@ -15,8 +14,6 @@ const productSchema = new Schema({
       ref: "Review"
     }]
     
-
-
 });
 
 const Product = model("Product", productSchema);

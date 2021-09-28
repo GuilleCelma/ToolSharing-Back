@@ -1,6 +1,5 @@
 const { Schema, model } = require("mongoose");
 
-
 const transactionSchema = new Schema({
   renterId: String,
   ownerId:[{
@@ -10,7 +9,6 @@ const transactionSchema = new Schema({
   ,
   date: String,
   productId: String,
-
     
 });
 
