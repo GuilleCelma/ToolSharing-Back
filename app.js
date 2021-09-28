@@ -31,10 +31,10 @@ const user = require("./routes/user-routes");
 app.use("/", user);
 
 const review = require("./routes/review-routes");
-app.use("/review", review);
+app.use("/", review);
 
 const productRouter = require("./routes/product.routes");
-app.use("/api", productRouter);
+app.use("/", productRouter);
 
 
 
