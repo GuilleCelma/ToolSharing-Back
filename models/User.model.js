@@ -1,6 +1,5 @@
 const { Schema, model } = require("mongoose");
 
-
 const userSchema = new Schema({
   username:String,
   password: String,
@@ -32,7 +31,6 @@ const userSchema = new Schema({
     ref: "Product"
   }],
   
-
 });
 
 const User = model("User", userSchema);
