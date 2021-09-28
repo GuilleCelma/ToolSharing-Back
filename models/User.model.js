@@ -18,7 +18,7 @@ const userSchema = new Schema({
   },
   tel: Number,
   imgUrl: String,
-  paymentMethod: null,
+  paymentMethod: String,
   products:[{
     type: Schema.Types.ObjectId,
     ref: "Product"
