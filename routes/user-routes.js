@@ -2,22 +2,6 @@
 const router = require("express").Router
 const User = require("../models/User.model")
 
-
-//<-----------------ROUTE TO CREATE USERS -------------------------------------------------------------------------------------------------------->
-
-router.post("/user", (req, res) =>{
-    
-    
-    const {usernaname, password, email, address, birthdate, sex, tel } = req.body //<------------REACT CRONTOLED FORM INFO STORED----------------->
-    
-    
-    User
-    .create({usernaname, password, email, address, birthdate, sex, tel})
-    .then(userCreated => console.log(userCreated))
-    .catch(err => console.log (err))
-
-})
-
 //<-----------------ROUTE TO CREATE USERS -------------------------------------------------------------------------------------------------------->
 
 router.get( "/user/:id" , (req, res) =>{
