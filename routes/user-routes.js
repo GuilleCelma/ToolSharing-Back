@@ -1,14 +1,14 @@
 
-const router = require("express").Router
+const router = require("express").Router()
 const User = require("../models/User.model")
-
+const mongoose = require("mongoose")
 
 //<-----------------ROUTE TO CREATE USERS -------------------------------------------------------------------------------------------------------->
 
 router.post("/user", (req, res) =>{
     
     
-    const {usernaname, password, email, address, birthdate, sex, tel } = req.body //<------------REACT CRONTOLED FORM INFO STORED----------------->
+    const {usernaname, password, email, address, birthdate, sex, tel } = req.body //<------------REACT CONTROLED FORM INFO STORED----------------->
     
     
     User
@@ -18,7 +18,7 @@ router.post("/user", (req, res) =>{
 
 })
 
-//<-----------------ROUTE TO CREATE USERS -------------------------------------------------------------------------------------------------------->
+//<-----------------ROUTE TO DISPLAY USERS -------------------------------------------------------------------------------------------------------->
 
 router.get( "/user/:id" , (req, res) =>{
 
@@ -35,9 +35,9 @@ router.get( "/user/:id" , (req, res) =>{
 router.put( "/user/:id", (req,res) =>{
 
     const {id} = req.params  //<----------------GETING ID INFO FROM URL PARAMS ------------------------------------------------------------------->
-    const {usernaname, password, email, address, birthdate, sex, tel } = req.body  //<------------REACT CRONTOLED FORM INFO STORED---------------->
+    const {username, password, email, address, birthdate, sex, tel } = req.body  //<------------REACT CONTROLED FORM INFO STORED---------------->
 
-    User.findByIdAndUpdate(id, {usernaname, password, email, address, birthdate, sex, tel }, {new:true})
+    User.findByIdAndUpdate(id, {username, password, email, address, birthdate, sex, tel }, {new:true})
     .then(userUpdated => console.log(userUpdated) )
     .catch(err => console.log(err))
 })
