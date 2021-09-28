@@ -1,12 +1,22 @@
 const { Schema, model } = require("mongoose");
 
-// TODO: Please make sure you edit the user model to whatever makes sense in this case
+
 const productSchema = new Schema({
-  username: {
-    type: String,
-    // unique: true -> Ideally, should be unique, but its up to you
-  },
-  password: String,
+    name: String,
+    description: String,
+    amount: Number,
+    photo: String,
+    ownerId: String,
+    categories:[String],
+    //Disponibilidad ?????
+    adquisitionYear: String,
+    reviews:[{
+      type: Schema.Types.ObjectId,
+      ref: "Review"
+    }]
+    
+
+
 });
 
 const Product = model("Product", productSchema);

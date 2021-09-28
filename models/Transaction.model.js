@@ -1,12 +1,17 @@
 const { Schema, model } = require("mongoose");
 
-// TODO: Please make sure you edit the user model to whatever makes sense in this case
+
 const transactionSchema = new Schema({
-  username: {
-    type: String,
-    // unique: true -> Ideally, should be unique, but its up to you
-  },
-  password: String,
+  renterId: String,
+  ownerId:[{
+    type: Schema.Types.ObjectId,
+    ref: "User"
+  }]
+  ,
+  date: String,
+  productId: String,
+
+    
 });
 
 const Transaction = model("Transaction", transactionSchema);
