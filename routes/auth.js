@@ -91,4 +91,13 @@ router.post('/login', (req, res, next) => {
 
 module.exports = router;
 
+//<-----------------NECESITAMOS EN EL FRONT QUE NOS LLEVE A LA AUTH CON GOOGLE------------------------------------->
+/* app.get ("/", (req,res) => {
+  res.send(<a href="/auth/google">Authenticate with Google</a>)
+}) */
+/* 
+app.get("/protected", (req,res) => {
+  console.log("protected route")
+}) */
+
 

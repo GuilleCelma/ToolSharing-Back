@@ -7,9 +7,13 @@ const app = express();
 const cors = require("cors")
 require('./config/session.config')(app)
 
+<<<<<<< HEAD
 
 require("./config")(app)
 
+=======
+const app = express();
+>>>>>>> 8f8d82ec2c75c069572382533a43bd1dea96a015
 
 
 
